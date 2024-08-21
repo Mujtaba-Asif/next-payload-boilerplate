@@ -11,7 +11,7 @@ import express from "express";
 import payload from "payload";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = parseInt(process.env.PORT) || 3000;
 
 const start = async (): Promise<void> => {
   await payload.init({
@@ -35,7 +35,7 @@ const start = async (): Promise<void> => {
 
   const nextApp = next({
     dev: process.env.NODE_ENV !== "production",
-    port: 3000,
+    port: PORT,
   });
 
   const nextHandler = nextApp.getRequestHandler();
