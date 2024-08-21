@@ -47,7 +47,7 @@ const start = async (): Promise<void> => {
 
     app.listen(PORT, async () => {
       payload.logger.info(
-        `Next.js App URL: ${process.env.PAYLOAD_PUBLIC_SERVER_URL}`
+        `Next.js App URL: ${process.env.PAYLOAD_PUBLIC_SERVER_URL} ${PORT}`
       );
     });
   });
